@@ -2,5 +2,14 @@ const mongoose = require('mongoose');
 
 //  Your code goes here
 
-
-module.exports = marioModel;
+const marioModel = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    weight:{
+        type: Number,
+        required: true,
+    }
+})
+module.exports = mongoose.model("mariochar", marioModel);
